@@ -26,7 +26,7 @@ class VerificationScreen extends StatelessWidget {
           children: const [
             Text(
               "Enter your 4-digit code",
-              style: TextStyle(fontSize: 26),
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 27,

@@ -10,8 +10,8 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Image.network(
-            "https://images.pexels.com/photos/6994277/pexels-photo-6994277.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          Image.asset(
+            "assets/images/grocery_man.jpg",
             height: double.infinity,
             width: double.infinity,
             fit: BoxFit.cover,
@@ -32,7 +32,7 @@ class OnboardingScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 48,
                     color: Colors.white,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w900,
                   ),
                 ),
                 const Text(

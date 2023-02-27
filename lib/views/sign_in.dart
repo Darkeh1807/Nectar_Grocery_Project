@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:nectar_grocery_app/views/select_location.dart';
 import 'package:nectar_grocery_app/views/verification.dart';
 import 'package:nectar_grocery_app/widgets/social_media_auth_button.dart';
 
@@ -22,9 +23,7 @@ class SignIn extends StatelessWidget {
               width: double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage(
-                      "https://o.remove.bg/downloads/f72469d9-a289-4e75-8c6f-2171b198df8b/pexels-any-lane-5946083-removebg-preview.png",
-                    ),
+                    image: AssetImage("assets/images/original_grocery.png"),
                     fit: BoxFit.cover),
               ),
             ),
@@ -44,16 +43,16 @@ class SignIn extends StatelessWidget {
                 children: [
                   TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Image.network(
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/255px-Flag_of_Ghana.svg.png",
+                      prefixIcon: Image.asset(
+                        "assets/images/flag.png",
                         height: 20,
                         width: 20,
                       ),
-                      hintText: "+233",
+                      hintText: " +233",
                       hintStyle: const TextStyle(
-                        fontSize: 16,
-                        color: Color.fromRGBO(3, 3, 3, 1),
-                      ),
+                          fontSize: 16,
+                          color: Color.fromRGBO(3, 3, 3, 0.4),
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
@@ -83,7 +82,7 @@ class SignIn extends StatelessWidget {
                       authOptionColor: Color.fromRGBO(83, 131, 236, 1)),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 InkWell(
                   onTap: () {
@@ -95,6 +94,18 @@ class SignIn extends StatelessWidget {
                       authOptionColor: Color.fromRGBO(74, 102, 172, 1)),
                 )
               ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SelectLocation()));
+              },
+              child: Center(child: const Text("Select Location")),
             )
           ],
         ),
