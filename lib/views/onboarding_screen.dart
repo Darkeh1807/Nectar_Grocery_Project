@@ -2,8 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:nectar_grocery_app/views/sign_in.dart';
 import 'package:nectar_grocery_app/widgets/custom_button.dart';
 
-class OnboardingScreen extends StatelessWidget {
+class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
+
+  @override
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

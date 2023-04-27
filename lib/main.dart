@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar_grocery_app/views/navigation_page.dart';
 
 import 'package:nectar_grocery_app/views/onboarding_screen.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: const OnboardingScreen(),
     );

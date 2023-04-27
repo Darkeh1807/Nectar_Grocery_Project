@@ -43,12 +43,15 @@ class SignIn extends StatelessWidget {
                 children: [
                   TextField(
                     decoration: InputDecoration(
-                      prefixIcon: Image.asset(
-                        "assets/images/flag.png",
-                        height: 20,
-                        width: 20,
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: Image.asset(
+                          "assets/images/flag.png",
+                          height: 20,
+                          width: 20,
+                        ),
                       ),
-                      hintText: " +233",
+                      hintText: "024*****45",
                       hintStyle: const TextStyle(
                           fontSize: 16,
                           color: Color.fromRGBO(3, 3, 3, 0.4),
@@ -105,7 +108,9 @@ class SignIn extends StatelessWidget {
                     MaterialPageRoute(
                         builder: (context) => const SelectLocation()));
               },
-              child: Center(child: const Text("Select Location")),
+              child: const Center(
+                child: Text("Select Location"),
+              ),
             )
           ],
         ),
